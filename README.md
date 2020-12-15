@@ -1,9 +1,9 @@
 # Staðfangaskrá EXTRA
-## Vikulega uppfærð, auðguð, útgáfa af Staðfangaskrá Þjóðskrár
+## Vikulega uppfærð, auðguð, útgáfa af Staðfangaskrá Þjóðskrár frá Gagnaþjónustu Reykjavíkurborgar
 
 ---
 
-Hér má nálgast auðgaða útgáfu af staðfangaskrá. Í stuttu máli:
+Hér má nálgast auðgaða útgáfu af Staðfangaskrá. Í stuttu máli:
 
 * Einungis staðföng í Reykjavík
 * Uppfært vikulega
