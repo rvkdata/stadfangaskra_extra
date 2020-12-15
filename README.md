@@ -8,19 +8,13 @@ Hér má nálgast auðgaða útgáfu af staðfangaskrá. Í stuttu máli:
 * Einungis staðföng í Reykjavík
 * Uppfært vikulega
 * Aukin eigindi koma frá svæðaskiptingum LUKR
-* Auðvelt að bæta við eigindum ef flákar/svæðaskiptingar eru fyrir hendi
+* Breytingasaga er í commit sögu
 
 ### Tæknilýsing
 
-Kl. 22:15 hvert sunnudagskvöld keyrir CircleCI eftir skilgreiningum í `.circleci/general.yml`
+Kl. 22:15 hvert sunnudagskvöld eru skrár uppfærðar.
 
-Fyrst eru hráskrár sóttar. Það eru annarsvegar .geojson skrár með flákum ýmissa skiptinga sem eru sóttar frá LUKR og hinsvegar staðfangaskráin sjálf. 
-
-Sá kóði býr í `fetch_sources.py`. Skilgreiningar fyrir hráskrárnar eru í `config.py`.  Hráskrárnar eru geymdar í `sources/` möppunni
-
-Því næst keyrir `new_stadfangaskra.py`. Þar er eigindum bætt við hvert staðfang ef það fellur inn í flákana. 
-
-Tökum dæmi um staðfangið með HEINUM 10135437 (Borgartún 8-16A). Svona lítur það út í staðfangaskrá:
+Tökum dæmi um staðfangið með HEINUM 10135437 (Borgartún 8-16A). Svona lítur það út í Staðfangaskrá Þjóðsrár:
 
 |Eigindi             | Gildi               |  
 |--------------------|---------------------|
@@ -52,7 +46,7 @@ Tökum dæmi um staðfangið með HEINUM 10135437 (Borgartún 8-16A). Svona lít
 | DAGS\_UTGAFA       | 2020\-09\-13        |
 
 
-Skráin `output/stafangaskra_exta.csv` inniheldur auk þessara eiginda, eftirfarandi eigindi, sem er bætt við sjálfkrafa:
+Skráin `stadfangaskra_exta.csv` inniheldur auk þessara eiginda, eftirfarandi eigindi, sem er bætt við sjálfkrafa:
 
 | Eigindi                         | Gildi            |
 |---------------------------------|------------------|
@@ -63,9 +57,17 @@ Skráin `output/stafangaskra_exta.csv` inniheldur auk þessara eiginda, eftirfar
 | LUKR\_STJORNSYSLUHVERFI\_HVERFI | 4\. Laugardalur  |
 | LUKR\_HVERFAHEITI\_HEITI        | Tún              |
 
-Auk þess eru í `output`möppunni útgáfur sem innihalda einungis eigindi frá tilteknum svæðaskiptingum. Þar er t.d. `skolahverfi.csv`, sem inniheldur þá einungis eigindi sem tengjast skólahverfum, en ekki öðrum svæðaskiptingum.
+Auk þess eru hér einnig útgáfur sem innihalda einungis eigindi frá tilteknum svæðaskiptingum. Hér er t.d. `skolahverfi.csv`, sem inniheldur þá einungis eigindi sem tengjast skólahverfum, en ekki öðrum svæðaskiptingum.
 
 Öll viðbættu eigindi hafa (að þessu sinni) forskeytið LUKR.
+
+Athugaðu að kommum í hnitum er skipt út fyrir punkta (Staðfangaskrá Þjóðskrár notast við kommur í hnitum).
+
+Dálkar í CSV skrám eru aðgreindir með kommum.
+
+Dagsetningar eru á sniðinu YYYY-MM-DD
+
+Bestu þakkir til [Matt Riggot](https://www.flother.is/) fyrir hugmyndina, en hann birtir bætta útgáfu af Staðfangaskrá fyrir allt landið [hér](https://github.com/flother/stadfangaskra/) (en án þeirra eiginda sem bætt er við hér).
 
 ---
 
@@ -122,7 +124,7 @@ Eigindi staðfangaskrár eru þessi:
 |                | 3 Hnitpunktur staðsettur á innkeyrslu lóðar                                                                                                    |
 |                | 4 Hnitpunktur staðsettur með vissu innan lóðamarka                                                                                             |
 |                | 5 Hnitpunktur staðsettur innan áætlaðs byggingarreits                                                                                          |
-| STADA          | Staða hnits0Óyfirfarið1Yfirfarið2Þarf endurskoðun9Vantar heitinúmer                                                                            |
+| STADA          | Staða hnits 0 Óyfirfarið 1 Yfirfarið 2 Þarf endurskoðun9Vantar heitinúmer                                                                            |
 | ATHUGASEMD     | Notað til ítarlegri aðgreiningar t\.d\. á matshlutum og skráningu heimildarmanna eða heimilda                                                  |
 | X\_ISN93       | x\-gildi í austur mælt í metrum í ISN93                                                                                                        |
 | Y\_ISN93       | y\-gildi í norður mælt í metrum í ISN93                                                                                                        |
