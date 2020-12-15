@@ -67,7 +67,7 @@ Dálkar í CSV skrám eru aðgreindir með kommum.
 
 Dagsetningar eru á sniðinu YYYY-MM-DD
 
-Bestu þakkir til [Matt Riggot](https://www.flother.is/) fyrir hugmyndina, en hann birtir bætta útgáfu af Staðfangaskrá fyrir allt landið [hér](https://github.com/flother/stadfangaskra/) (en án þeirra eiginda sem bætt er við hér).
+Bestu þakkir til [Matt Riggott](https://www.flother.is/) fyrir hugmyndina, en hann birtir bætta útgáfu af Staðfangaskrá fyrir allt landið [hér](https://github.com/flother/stadfangaskra/) (en án þeirra eiginda sem bætt er við hér).
 
 ---
 
