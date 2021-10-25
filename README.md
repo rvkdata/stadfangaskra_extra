@@ -48,20 +48,22 @@ Tökum dæmi um staðfangið með HEINUM 10135437 (Borgartún 8-16A). Svona lít
 
 Skráin `stadfangaskra_exta.csv` inniheldur auk þessara eiginda, eftirfarandi eigindi, sem er bætt við sjálfkrafa:
 
-| Eigindi                         | Gildi            |
-|---------------------------------|------------------|
-| LUKR\_SKOLI\_YNGRI\_STIG        | Austurbæjarskóli |
-| LUKR\_SKOLI\_UNGLINGA\_STIG     | Austurbæjarskóli |
-| LUKR\_SKOLI\_SKOLANR            | 4                |
-| LUKR\_SORPHIRDA\_BILL           | 4\.1             |
-| LUKR\_STJORNSYSLUHVERFI\_HVERFI | 4\. Laugardalur  |
-| LUKR\_HVERFAHEITI\_HEITI        | Tún              |
+| Eigindi                         | Gildi                      |
+|---------------------------------|----------------------------|
+| LUKR\_SKOLI\_YNGRI\_STIG        | Austurbæjarskóli           |
+| LUKR\_SKOLI\_UNGLINGA\_STIG     | Austurbæjarskóli           |
+| LUKR\_SKOLI\_SKOLANR            | 4                          |
+| LUKR\_SORPHIRDA\_BILL           | 4\.1                       |
+| LUKR\_STJORNSYSLUHVERFI\_HVERFI | 4\. Laugardalur            |
+| LUKR\_HVERFAHEITI\_HEITI        | Tún                        |
+| LUKR\_KJORHVERFI\_KJORSTADUR    | Höfðatorg                  |
+| LUKR\_KJORHVERFI\_KJORDAEMI     | Reykjavíkurkjördæmi norður |
 
 Auk þess eru hér einnig útgáfur sem innihalda einungis eigindi frá tilteknum svæðaskiptingum. Hér er t.d. `skolahverfi.csv`, sem inniheldur þá einungis eigindi sem tengjast skólahverfum, en ekki öðrum svæðaskiptingum.
 
 Öll viðbættu eigindi hafa (að þessu sinni) forskeytið LUKR.
 
-Athugaðu að kommum í hnitum er skipt út fyrir punkta (Staðfangaskrá Þjóðskrár notast við kommur í hnitum).
+Athugaðu að kommum í hnitum er skipt út fyrir punkta.
 
 Dálkar í CSV skrám eru aðgreindir með kommum.
 
