@@ -14,16 +14,16 @@ Hér má nálgast auðgaða útgáfu af Staðfangaskrá. Í stuttu máli:
 
 Kl. 22:15 hvert sunnudagskvöld eru skrár uppfærðar.
 
-Tökum dæmi um staðfangið með HEINUM 10135437 (Borgartún 8-16A). Svona lítur það út í Staðfangaskrá Þjóðsrár:
+Tökum dæmi um staðfangið með HNITNUM 10135437 (Borgartún 8-16A). Svona lítur það út í Staðfangaskrá Þjóðskrár:
 
 |Eigindi             | Gildi               |  
 |--------------------|---------------------|
+| FID                | Stadfangaskra.fid-5d961e69_17eb0177cd8_3ad            |
 | HNITNUM            | 10017780            |
 | SVFNR              | 0000                |
 | BYGGD              | 01                  |
 | LANDNR             | 199350              |
 | HEINUM             | 1112740             |
-| FASTEIGNAHEITI     | Borgartún 8\-16A    |
 | MATSNR             |                     |
 | POSTNR             | 105                 |
 | HEITI\_NF          | Borgartún           |
@@ -37,16 +37,19 @@ Tökum dæmi um staðfangið með HEINUM 10135437 (Borgartún 8-16A). Svona lít
 | GAGNA\_EIGN        | Þjóðskrá Íslands    |
 | TEGHNIT            | 0                   |
 | YFIRFARID          | 0                   |
-| ATHUGASEMD         |                     |
+| YFIRF_HEITI        |                     |
+| ATH                |                     |
 | NAKV\_XY           |                     |
-| X\_ISN93           | 358474\.193181818   |
-| Y\_ISN93           | 407951\.068181818   |
-| LAT\_WGS84         | 64\.1450988589666   |
-| LONG\_WGS84        | \-21\.9083489552494 |
-| DAGS\_UTGAFA       | 2020\-09\-13        |
+| HNIT               | POINT (358474.193181818 407951.068181818)   |
+| N_HNIT_WGS84       | 64\.1450988589666   |
+| E_HNIT_WGS84       | \-21\.9083489552494 |
+| NOTNR              | 956                 |
+| LM_HEIMILISFANG    | Borgartún 8A 8-16 (199350)                 |
+| VEF_BIRTING        | Borgartún 8A 8-16 (199350) |
+| HUSMERKING         | 8A                  |
 
 
-Skráin `stadfangaskra_exta.csv` inniheldur auk þessara eiginda, eftirfarandi eigindi, sem er bætt við sjálfkrafa:
+Skráin `stadfangaskra_exta.csv` inniheldur auk þessara eiginda (að FID undanskyldu - því er hent), eftirfarandi eigindi, sem er bætt við sjálfkrafa:
 
 | Eigindi                         | Gildi                      |
 |---------------------------------|----------------------------|
@@ -62,8 +65,6 @@ Skráin `stadfangaskra_exta.csv` inniheldur auk þessara eiginda, eftirfarandi e
 Auk þess eru hér einnig útgáfur sem innihalda einungis eigindi frá tilteknum svæðaskiptingum. Hér er t.d. `skolahverfi.csv`, sem inniheldur þá einungis eigindi sem tengjast skólahverfum, en ekki öðrum svæðaskiptingum.
 
 Öll viðbættu eigindi hafa (að þessu sinni) forskeytið LUKR.
-
-Athugaðu að kommum í hnitum er skipt út fyrir punkta.
 
 Dálkar í CSV skrám eru aðgreindir með kommum.
 
@@ -92,29 +93,28 @@ en aðeins ein landeign er tengd hverju staðfangi. Þannig getur t.d. hver stig
 
 Reglugerð um skráningu staðfanga má finna [hér](https://www.reglugerd.is/reglugerdir/eftir-raduneytum/srn/nr/0577-2017). 
 
-Staðfangaskrá Þjóðskrár má sækja [hér](https://skra.is/thjonusta/gogn/hra-gogn/)
 
 ---
 
 ### Eigindi staðfangaskrár
 
-Eigindi staðfangaskrár eru þessi:
+Eigindi staðfangaskrár eru þessi ([nánar hér](https://skra.is/gogn/grunngogn-til-nidurhals/stadfangaskra/))::
 
 | Eigindi        | Lýsing                                                                                                                                         |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| HNITNR         | Hlaupandi upplýsingalaust auðkennisnúmer staðfangs\. Hvert staðfang getur verið tengt mörgum hnitum, en hvert hnit hefur aðeins eitt hnitnúmer |
+| FID            | Upplýsingalaust auðkennisnúmer fyrir gagnagrunn ÞÍ. Þessi dálkur er ekki sýndur í WFS grunni |
+| HNITNUM         | Hlaupandi upplýsingalaust auðkennisnúmer staðfangs\. Hvert staðfang getur verið tengt mörgum hnitum, en hvert hnit hefur aðeins eitt hnitnúmer |
 | SVFN           | Sveitarfélagsnúmer er fjögurra stafa auðkennisnúmer                                                                                            |
 | BYGGD          | Byggðarnúmer innan viðkomandi sveitarfélags                                                                                                    |
 | LANDNR         | Hlaupandi sex stafa auðkennisnúmer landeigna í landeignaskrá Þjóðskrár Íslands                                                                 |
-| HEINUM         | Heitinúmer er sjö stafa auðkennisnúmer staðfanga/fasteignaheita\. Eitt heitinúmer er fyrir hvert staðfang                                      |
-| FASTEIGNAHEITI | Heiti fasteignar í Þjóðskrá Íslands\. Skráð af viðkomandi sveitarfélagi                                                                        |
-| MATSNR         | Matsnúmer \(7 stafir\)\. Raðnúmer\. Sérhver matseining er auðkennd með matsnúmeri\.                                                            |
-| POSTNR         | Póstnúmer þess póstsvæðis sem staðfang er innan skv\. nýjustu upplýsingum frá Íslandspósti hf\.                                                |
-| HEITI\_NF      | Staðfang í nefnifalli                                                                                                                          |
-| HEITI\_TGF     | Staðfang í þágufalli                                                                                                                           |
-| HUSNR          | Húsnúmer                                                                                                                                       |
-| BOKST          | Viðbættur bókstafur                                                                                                                            |
-| VIDSK          | Viðskeyti við staðfang                                                                                                                         |
+| HEINUM         | Heitinúmer er sjö stafa auðkennisnúmer staðfanga/fasteignaheita. Eitt heitinúmer er fyrir hvert staðfang. Annarstaðar er þetta kallað staðfanganúmer                                      |
+| MATSNR         | Matsnúmer (7 stafir). Raðnúmer. Sérhver matseining er auðkennd með matsnúmeri. Sum staðföng benda á ákveðna matseiningu.                                                            |
+| POSTNR         | Póstnúmer þess póstsvæðis sem staðfang er innan skv. nýjustu upplýsingum frá Byggðastofnun                                                |
+| HEITI\_NF      | Staðvísir í nefnifalli                                                                                                                          |
+| HEITI\_TGF     | Staðvísir í þágufalli                                                                                                                           |
+| HUSNR          | Staðgreinir, húsnúmer                                                                                                                                       |
+| BOKST          | Staðgreinir, viðbættur bókstafu                                                                                                                           |
+| VIDSK          | Staðgreinir, viðskeyti við staðfang                                                                                                                         |
 | SERHEITI       | Sérheiti staðfangs                                                                                                                             |
 | DAGS\_INN      | Dagsetning fyrstu innskráningar                                                                                                                |
 | DAGS\_LEIDR    | Dagsetning síðustu leiðréttingar                                                                                                               |
@@ -126,14 +126,24 @@ Eigindi staðfangaskrár eru þessi:
 |                | 3 Hnitpunktur staðsettur á innkeyrslu lóðar                                                                                                    |
 |                | 4 Hnitpunktur staðsettur með vissu innan lóðamarka                                                                                             |
 |                | 5 Hnitpunktur staðsettur innan áætlaðs byggingarreits                                                                                          |
-| STADA          | Staða hnits 0 Óyfirfarið 1 Yfirfarið 2 Þarf endurskoðun9Vantar heitinúmer                                                                            |
-| ATHUGASEMD     | Notað til ítarlegri aðgreiningar t\.d\. á matshlutum og skráningu heimildarmanna eða heimilda                                                  |
-| X\_ISN93       | x\-gildi í austur mælt í metrum í ISN93                                                                                                        |
-| Y\_ISN93       | y\-gildi í norður mælt í metrum í ISN93                                                                                                        |
-| LAT\_WGS84     | Breiddargráða \(Norður\)                                                                                                                       |
-| LONG\_WGS84    | Lengdargráða \(Austur\)                                                                                                                        |
-| DAGS\_UTGAFA   | Dagsetning útskriftar skrár                                                                                                                    |
-|                |                                                                                                                                                |
+| YFIRFARID      | Staða hnits |
+|                | 0 Óyfirfarið| 
+|                | 1 Yfirfarið| 
+|                | 2 Þarf endurskoðun |
+|                | 9 Vantar heitinúmer |
+|YFIRF_HEITI     | Þessi dálkur er ekki lengur nýttur.|
+| ATH     | Notað til ítarlegri aðgreiningar t\.d\. á matshlutum og skráningu heimildarmanna eða heimilda  |
+| NAKV_XY       | Áætluð skekkjumörk í metrum |                                                                      
+| HNIT       | Staðsetning staðfangs í ISN93 formi. Sett fram sem "POINT (X-hnit Y-hnit)". Þessi dálkur er ekki sýndur í WFS grunni |
+| N_HNIT_WGS84     | Norður hnit í breiddargráðu WGS84. Allt í gráðum, ekki mín og sek. Fyrstu 2 tölustafir eru fyrir framan kommu og allt eftir það fyrir aftan kommu.|
+| E_HNIT_WGS84    | Austur hnit í lengdargráða WGS84. Allt í gráðum, ekki mín og sek. Mínus merki og fyrstu 2 tölustafir eru fyrir framan kommu og allt eftir það fyrir aftan kommu.|
+| DAGS\_UTGAFA   | Dagsetning útskriftar skrár  |
+|  NOTNR           |Auðkennisnúmer þess starfsmanns sem átti síðast við þetta hnit í gagnagrunninum|
+| LM_HEIMILISFANG | Birtingaform staðfangs með landnúmeri viðskeyttu. Samanstendur af HEITI_NF, HUSNR, BOKST, VIDSK, (LANDNR) |
+| VEF_BIRTING | Birtingaform staðfangs með landnúmeri viðskeyttu. Samanstendur af HEITI_NF, HUSNR, BOKST, VIDSK, (LANDNR) |
+| HUSMERKING | Sýnir dálkana HÚSNR og BOKST saman |
+
+
 
 
 
